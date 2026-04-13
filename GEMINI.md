@@ -10,6 +10,16 @@ The site is a **pure static HTML/CSS project** — no build step, no bundler, no
 
 ---
 
+## Commands
+
+```bash
+# Start local dev server (required — do NOT open index.html via file://)
+python3 -m http.server 8080
+# Then open: http://localhost:8080
+```
+
+---
+
 ## Repository Structure
 
 ```
