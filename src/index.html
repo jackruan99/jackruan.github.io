@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <link
     rel="stylesheet"
@@ -21,7 +21,7 @@
   <div class="container">
       <div id="navbar-placeholder"></div>
       <script>
-        fetch('navbar.html')
+        fetch('components/navbar.html')
           .then(response => response.text())
           .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
@@ -42,7 +42,7 @@
         <main>
           <h1>Professional Experiences</h1>
           <a href="experience.html" class="white-border-button">View Professional Experience</a>
-          <a href="resume.pdf" class="white-border-button" target="resume.pdf">Download Resume</a>
+          <a href="../public/resume.pdf" class="white-border-button" target="resume.pdf">Download Resume</a>
         </main>
       </div>
 
@@ -60,7 +60,7 @@
     
     <div id="footer-placeholder"></div>
     <script>
-      fetch('footer.html')
+      fetch('components/footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-placeholder').innerHTML = data;
