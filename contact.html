@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack Ruan | Contact</title>
+
+  <!-- Google Fonts: Pirata One -->
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <div class="section">
+      <header>
+        <h1>Contact Me</h1>
+      </header>
+    </div>
+
+    <!-- New Email Button Section -->
+    <div class="section">
+      <main>
+        <h1>Get in Touch</h1>
+        <a href="mailto:your-email@example.com" class="white-border-button" style="display:inline-block; margin-top: 1rem;">
+          Email Me
+        </a>
+      </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </div>
+
+</body>
+</html>

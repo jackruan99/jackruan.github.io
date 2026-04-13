@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack Ruan | Software Engineer, Artist</title>
+
+  <!-- Google Fonts: Pirata One -->
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div id="navbar-placeholder"></div>
+      <script>
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+      </script>
+      
+      <div class="section">
+        <main>
+          <h1>Professional Experiences</h1>
+          <div class="resume-entries">
+            <h3>Capital One | Software Engineer | Certificate Management Team</h3>
+            <p><em>Feb 2025 - Present</em></p>
+            <ul>
+              <li>Integrated OpenTelemetry across 20+ AWS Lambda functions, enabling end-to-end distributed tracing, cutting debugging time by 40%, and doubling the speed of production issue detection</li>
+              <li>Architected and deployed a serverless pipeline using AWS Lambda and SQS to automate the discovery of AWS accounts and their associated certificates across Capital One, streamlining certificate lifecycle management across thousands of accounts</li>
+            </ul>
+          </div>
+          <div class="resume-entries">
+            <h3>Capital One | Software Engineer | HR Warehouse Team</h3>
+            <p><em>Feb 2024 - Feb 2025</em></p>
+            <ul>
+              <li>Modernized a legacy ETL system by building a config-driven, serverless ETL platform using AWS Glue and PySpark, enabling the migration of 100+ ETL processes and reducing development effort by up to 79%; contributed to a patent submission</li>
+              <li>Developed an upstream notification infrastructure leveraging AWS SNS, SQS, and Lambda to automate ETL pipeline triggers on vendor data arrival, improving integration speed by 50% and significantly reducing manual intervention</li>
+              <li>Diagnosed and remediated 8 critical issues during an enterprise disaster recovery exercise; implemented corrective actions that enhanced system resilience and ensured uninterrupted data delivery in high-risk scenarios</li>
+            </ul>
+          </div>  
+          <div class="resume-entries">
+            <h3>Meta | Software Engineer Intern</h3>
+            <p><em>May 2022 - Aug. 2022</em></p>
+            <ul>
+              <li>Contributed to the Warehouse Data Privacy team in developing internal tools that support Meta's privacy commitments</li>
+              <li>Designed and implemented 3 critical safety features for comprehensive end-to-end monitoring and management for data users</li>
+              <li>Created 2 monitoring pipelines using Python and Presto to identify unintended methods users employ to bypass safety checks</li>
+              <li>Designed and developed the user interface for the safety features using React, PHP, and GraphQL</li>
+            </ul>
+          </div>  
+          <div class="resume-entries"></div>  
+          <h3>CIDAR Lab | Research Software Engineer Intern</h3>
+            <p><em>May 2022 - Aug. 2022</em></p>
+            <ul>
+              <li>Developed 4 high-demand features for the open-source project 3DuF, an interactive web-based tool for designing custom microfluidic chips</li>
+              <li>Implemented, tested, and integrated Hightower’s and A* routing algorithms to efficiently find a connection between components</li>
+              <li>Developed key features, such as a keyboard shortcut for centering chip designs, significantly enhancing user experience</li>
+              <li>Refactored 20% of the codebase using the Vue.js framework, converting legacy JavaScript code to TypeScript for maintainability</li>
+        </main>
+      </div>
+
+    
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </div>
+
+</body>
+</html>

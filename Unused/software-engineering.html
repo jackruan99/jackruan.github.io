@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software Engineering - Jack Ruan</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .back-home {
+      margin-top: 2rem;
+      display: inline-block;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
+    .section-title {
+      color: #007acc;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #007acc;
+      padding-bottom: 0.25rem;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: default;
+      color: #333;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #004a99;
+    }
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Software Engineering Portfolio</h1>
+      <p class="lead">Showcasing my software development projects, experience, and skills.</p>
+    </header>
+
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Capital One - Certificate Management Team</h3>
+            <p class="card-text"><em>Feb 2025 – Present</em></p>
+            <ul>
+              <li>Implemented OpenTelemetry across AWS Lambda functions to enable distributed tracing and accelerate debugging.</li>
+              <li>Built serverless automation pipelines for certificate lifecycle management using AWS Lambda and SQS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Capital One - HR Warehouse Team</h3>
+            <p class="card-text"><em>Feb 2024 – Feb 2025</em></p>
+            <ul>
+              <li>Modernized legacy ETL systems by building a config-driven serverless platform with AWS Glue and PySpark.</li>
+              <li>Automated ETL pipeline triggers with AWS SNS, SQS, and Lambda, improving data integration speeds.</li>
+              <li>Participated in disaster recovery exercises to ensure system resilience.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Meta - Warehouse Data Privacy Team Intern</h3>
+            <p class="card-text"><em>May 2022 – Aug 2022</em></p>
+            <ul>
+              <li>Developed internal privacy tools supporting data safety and compliance.</li>
+              <li>Designed UI features and backend monitoring pipelines with React, PHP, GraphQL, and Python.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">CIDAR Lab - Research Software Engineer Intern</h3>
+            <p class="card-text"><em>June 2021 – Sept 2021</em></p>
+            <ul>
+              <li>Developed and integrated routing algorithms for a microfluidic chip design tool.</li>
+              <li>Refactored codebase from JavaScript to TypeScript and improved user experience.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">OpenTelemetry AWS Lambda Integration</h3>
+            <p class="card-text">Enhanced monitoring by adding distributed tracing to serverless functions.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Serverless ETL Platform</h3>
+            <p class="card-text">Built scalable ETL pipelines using AWS Glue and PySpark, improving data workflows.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Privacy Tools at Meta</h3>
+            <p class="card-text">Implemented safety features and data usage monitoring pipelines for privacy compliance.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">3DuF Microfluidic Chip Designer</h3>
+            <p class="card-text">Contributed to open-source web tool with new features and UI improvements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>Boston University</strong> — Bachelor of Arts in Computer Science (Cum Laude)</li>
+        <li><strong>Georgia Institute of Technology</strong> — Master of Science in Cybersecurity (Starting Aug 2025)</li>
+      </ul>
+    </section>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Jack Ruan</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Apply to full body */
+body {
+  background-color: #000;  /* black background */
+  color: #fff;             /* white text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Section styles */
+.section {
+  text-align: left;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+/* Resume Entries styles */
+.resume-entries {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Nav Bar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 120rem;
+  background-color: #000;
+  color: #fff;
+  /* Nav Bar fixed on top */
+  position: fixed;
+  top: 0;
+  width: 1000px;
+  z-index: 1000;
+}
+
+.nav-title {
+  font-family: 'Pirata One', serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Gill Sans', sans-serif;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Header styles */
+.title-img-wrapper {
+  display: flex;
+  align-items: center; /* vertically center h1 and img */
+  gap: 1rem;           /* space between h1 and img */
+}
+
+header h1 {
+  font-size: 8rem;
+  font-family: 'Pirata One', system-ui, serif;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  max-width: 600px;
+  margin-left: 0;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+header img {
+  max-height: 300px;    /* control image size */
+  width: auto;
+}
+
+/* Main styles */
+main h1 {
+  font-size: 3rem;
+  font-family: 'Pirata One', system-ui, serif;
+  margin-bottom: 0.5rem;
+}
+
+main h3 {
+  margin-left: 0;
+  font-family: 'Gill Sans', sans-serif;
+  line-height: 1.6;
+}
+
+main p {
+  margin-left: 0;
+  font-family: 'Gill Sans', sans-serif;
+  line-height: 1.6;
+}
+
+main li {
+  margin-left: 0;
+  font-family: 'Gill Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Button styling */
+.white-border-button {
+  width: 250px;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: 4px solid #fff;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 1rem;
+  border-radius: 0; /* sharp corners */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.white-border-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Footer styling */
+footer {
+  font-size: 1rem;
+  font-family: 'Pirata One', system-ui, serif;
+  margin-bottom: 0;
+}
