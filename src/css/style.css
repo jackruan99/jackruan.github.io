@@ -442,9 +442,9 @@ footer {
 .timeline-logo {
   position: absolute;
   left: -8rem;
-  top: 0.4rem;
-  width: 54px;
-  height: 54px;
+  top: 0.8rem;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: contain;
   border: 2px solid var(--border-color);
@@ -454,12 +454,12 @@ footer {
 }
 
 .timeline-logo--icon {
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--text-dim);
 }
 
