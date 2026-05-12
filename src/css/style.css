@@ -224,10 +224,8 @@ body {
   display: block;
 }
 
-/* In Naughty Mode, the dropdown vanishes! No escape! */
-body[data-ui-mode="hard"] .dropdown {
-  display: none !important;
-}
+
+
 
 /* Header styles */
 .title-img-wrapper {
