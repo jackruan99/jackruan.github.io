@@ -348,7 +348,7 @@ footer {
 /* ── Vertical Timeline ── */
 .timeline {
   position: relative;
-  margin: 2rem 0 0 4rem; /* shifted right */
+  margin: 2rem 0 0 10rem; /* shifted right to make room for logos */
   padding-left: 2rem;
 }
 
@@ -436,4 +436,32 @@ footer {
 
 .timeline-item--future .timeline-content {
   opacity: 0.65;
+}
+
+/* Timeline logos */
+.timeline-logo {
+  position: absolute;
+  left: -8rem;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-logo--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--text-dim);
+  padding: 0;
+}
+
+.timeline-item:hover .timeline-logo {
+  transform: scale(1.1);
 }
