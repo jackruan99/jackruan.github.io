@@ -10,6 +10,7 @@ body {
 .container {
   max-width: 1000px;
   margin: auto;
+  padding-top: 80px; /* Space for the fixed navbar */
 }
 
 /* Section styles */
@@ -27,19 +28,28 @@ body {
 
 /* Nav Bar styles */
 .navbar {
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  backdrop-filter: blur(10px);         /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  /* Nav Bar fixed on top and full width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 120rem;
-  background-color: #000;
-  color: #fff;
-  /* Nav Bar fixed on top */
-  position: fixed;
-  top: 0;
-  width: 1000px;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
 }
 
 .nav-title {
