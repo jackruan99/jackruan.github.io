@@ -28,6 +28,36 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="cyberpunk"] {
+  /* Cyberpunk Mode */
+  --bg-color: #0d0221;
+  --bg-gradient: radial-gradient(circle at center, #261447 0%, #0d0221 100%);
+  --text-color: #00ffcc;
+  --text-dim: #ff007f;
+  --nav-bg: rgba(13, 2, 33, 0.8);
+  --border-color: #00ffcc;
+  --btn-bg: #0d0221;
+  --btn-text: #00ffcc;
+  --btn-hover-bg: #00ffcc;
+  --btn-hover-text: #0d0221;
+  --shadow-color: rgba(0, 255, 204, 0.5);
+}
+
+[data-theme="ocean"] {
+  /* Ocean Mode */
+  --bg-color: #001f3f;
+  --bg-gradient: radial-gradient(circle at center, #003366 0%, #001f3f 100%);
+  --text-color: #e0f7fa;
+  --text-dim: #80deea;
+  --nav-bg: rgba(0, 31, 63, 0.8);
+  --border-color: #4dd0e1;
+  --btn-bg: #001f3f;
+  --btn-text: #4dd0e1;
+  --btn-hover-bg: #4dd0e1;
+  --btn-hover-text: #001f3f;
+  --shadow-color: rgba(77, 208, 225, 0.4);
+}
+
 /* Apply to full body */
 body {
   background: var(--bg-gradient) no-repeat fixed;
@@ -42,7 +72,7 @@ body {
 .container {
   max-width: 1000px;
   margin: auto;
-  padding-top: 20px; /* Extremely tight space */
+  padding-top: 64px; /* Perfectly fits the slimmed navbar */
 }
 
 /* Section styles */
@@ -122,24 +152,61 @@ body {
   color: var(--text-dim);
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
+/* Dropdown Button */
+.dropbtn {
   background: none;
-  border: 2px solid var(--border-color);
+  border: none;
   color: var(--text-color);
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 0.4rem 0.8rem;
   margin-left: 1.5rem;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  padding: 0.5rem;
+  transition: color 0.3s;
 }
 
-.theme-toggle:hover {
+.dropbtn:hover {
+  color: var(--text-dim);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--nav-bg);
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  z-index: 1;
+  border: 1px solid var(--border-color);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Gill Sans', sans-serif;
+  margin-left: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
   background-color: var(--text-color);
   color: var(--bg-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Header styles */
