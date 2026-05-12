@@ -13,20 +13,6 @@
   --shadow-color: rgba(255, 255, 255, 0.3);
 }
 
-[data-theme="light"] {
-  /* Light Mode */
-  --bg-color: #fff;
-  --bg-gradient: radial-gradient(circle at center, #f5f5f5 0%, #fff 100%);
-  --text-color: #000;
-  --text-dim: #444;
-  --nav-bg: rgba(255, 255, 255, 0.7);
-  --border-color: #000;
-  --btn-bg: #fff;
-  --btn-text: #000;
-  --btn-hover-bg: #000;
-  --btn-hover-text: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-}
 
 [data-theme="midcentury"] {
   /* Midcentury Modern Mode */
