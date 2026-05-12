@@ -345,63 +345,38 @@ footer {
   margin-bottom: 0;
 }
 
-/* ── Vertical Timeline (Centered Zigzag) ── */
+/* ── Vertical Timeline ── */
 .timeline {
   position: relative;
-  max-width: 760px;
-  margin: 2rem 0 0 6rem; /* shifted right of center */
-  padding: 0;
+  margin: 2rem 0 0 4rem; /* shifted right */
+  padding-left: 2rem;
 }
 
-/* Clearfix so container wraps floated children */
-.timeline::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-/* Center vertical line */
+/* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: 7px;
   top: 0;
   bottom: 0;
   width: 2px;
   background: var(--border-color);
-  opacity: 0.35;
-  transform: translateX(-50%);
+  opacity: 0.4;
 }
 
 .timeline-item {
   position: relative;
-  width: 50%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .timeline-item:last-child {
   margin-bottom: 0;
 }
 
-/* Odd items — left side, text aligned right */
-.timeline-item:nth-child(odd) {
-  float: left;
-  padding-right: 3rem;
-  text-align: right;
-  clear: left;
-}
-
-/* Even items — right side, text aligned left */
-.timeline-item:nth-child(even) {
-  float: right;
-  padding-left: 3rem;
-  text-align: left;
-  clear: right;
-}
-
-/* Dot on the center line */
+/* Dot on the line */
 .timeline-dot {
   position: absolute;
+  left: -2rem;
   top: 0.35rem;
   width: 14px;
   height: 14px;
@@ -410,14 +385,6 @@ footer {
   border: 3px solid var(--bg-color);
   box-shadow: 0 0 0 2px var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot {
-  right: -7px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-  left: -7px;
 }
 
 .timeline-item:hover .timeline-dot {
@@ -455,6 +422,16 @@ footer {
   color: var(--text-dim);
   margin: 0;
   font-style: italic;
+}
+
+.timeline-desc {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0;
+  opacity: 0.85;
 }
 
 .timeline-item--future .timeline-content {
