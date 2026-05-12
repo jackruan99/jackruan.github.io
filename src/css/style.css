@@ -408,10 +408,16 @@ footer {
   animation: pulse 2s infinite;
 }
 
-.timeline-item--present .present-label {
-  font-weight: bold;
-  color: var(--text-color);
-  border-bottom: 2px solid var(--border-color);
+.timeline-item--present .timeline-content {
+  background: rgba(var(--border-rgb), 0.05);
+  border-left: 4px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  transition: background 0.3s ease;
+}
+
+.timeline-item--present:hover .timeline-content {
+  background: rgba(var(--border-rgb), 0.1);
 }
 
 @keyframes pulse {
@@ -424,11 +430,6 @@ footer {
   100% {
     box-shadow: 0 0 0 0 rgba(var(--border-rgb, 0, 0, 0), 0);
   }
-}
-
-.timeline-item--present .timeline-title {
-  font-weight: bold;
-  font-size: 1.8rem;
 }
 
 .timeline-meta {
