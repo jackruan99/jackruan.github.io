@@ -91,6 +91,7 @@ header h1 {
   font-size: 8rem;
   font-family: 'Pirata One', system-ui, serif;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 header p {
@@ -99,6 +100,7 @@ header p {
   font-family: 'Gill Sans', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
+  color: #ccc; /* Dimmer for better hierarchy */
 }
 
 header img {
@@ -125,24 +127,28 @@ main h1 {
   font-size: 3rem;
   font-family: 'Pirata One', system-ui, serif;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 main h3 {
   margin-left: 0;
   font-family: 'Gill Sans', sans-serif;
   line-height: 1.6;
+  color: #fff;
 }
 
 main p {
   margin-left: 0;
   font-family: 'Gill Sans', sans-serif;
   line-height: 1.6;
+  color: #ccc;
 }
 
 main li {
   margin-left: 0;
   font-family: 'Gill Sans', sans-serif;
   line-height: 1.6;
+  color: #ccc;
 }
 
 /* Button styling */
