@@ -39,6 +39,11 @@
                 const newTheme = e.target.getAttribute('data-set-theme');
                 document.documentElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
+
+                document.body.setAttribute('data-ui-mode', 'standard');
+                localStorage.setItem('ui-mode', 'standard');
+                const buttons = document.querySelectorAll('.white-border-button');
+                buttons.forEach(btn => btn.style.transform = '');
               });
             });
 
