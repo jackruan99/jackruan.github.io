@@ -65,7 +65,8 @@ body {
 .container {
   max-width: 1000px;
   margin: auto;
-  padding-top: 64px; /* Perfectly fits the slimmed navbar */
+  padding-top: 64px;
+  /* Perfectly fits the slimmed navbar */
 }
 
 /* Section styles */
@@ -97,7 +98,8 @@ body {
 /* Nav Bar styles */
 .navbar {
   background-color: var(--nav-bg);
-  backdrop-filter: blur(10px);         /* glass effect */
+  backdrop-filter: blur(10px);
+  /* glass effect */
   -webkit-backdrop-filter: blur(10px);
   color: var(--text-color);
   /* Nav Bar fixed on top and full width */
@@ -187,7 +189,8 @@ body {
   position: relative;
   display: inline-block;
   margin-left: 1.5rem;
-  min-width: 180px; /* Forces enough space so the adjacent button doesn't overlap */
+  min-width: 180px;
+  /* Forces enough space so the adjacent button doesn't overlap */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -198,7 +201,7 @@ body {
   left: 0;
   background-color: var(--nav-bg);
   min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
   z-index: 1;
   border: 1px solid var(--border-color);
 }
@@ -231,8 +234,10 @@ body {
 /* Header styles */
 .title-img-wrapper {
   display: flex;
-  align-items: flex-end; /* Align bottom of image with bottom of text */
-  gap: 2.5rem;           /* space between img and h1 */
+  align-items: flex-end;
+  /* Align bottom of image with bottom of text */
+  gap: 2.5rem;
+  /* space between img and h1 */
 }
 
 header h1 {
@@ -253,7 +258,8 @@ header p {
 }
 
 header img {
-  max-height: 150px;    /* control image size */
+  max-height: 150px;
+  /* control image size */
   width: auto;
 }
 
@@ -268,7 +274,8 @@ header img {
   /* Anti-aliasing fix */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  margin-bottom: 1rem; /* Nudge higher */
+  margin-bottom: 1rem;
+  /* Nudge higher */
 }
 
 .headshot:hover {
@@ -319,7 +326,8 @@ main li {
   text-decoration: none;
   font-family: 'Gill Sans', sans-serif;
   font-size: 1rem;
-  border-radius: 0; /* sharp corners */
+  border-radius: 0;
+  /* sharp corners */
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
@@ -341,7 +349,7 @@ footer {
 .timeline {
   position: relative;
   max-width: 760px;
-  margin: 2rem auto 0;
+  margin: 2rem 0 0 6rem; /* shifted right of center */
   padding: 0;
 }
 
@@ -404,12 +412,10 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Left item dot: sits just past the right edge (center line) */
 .timeline-item:nth-child(odd) .timeline-dot {
   right: -7px;
 }
 
-/* Right item dot: sits just before the left edge (center line) */
 .timeline-item:nth-child(even) .timeline-dot {
   left: -7px;
 }
