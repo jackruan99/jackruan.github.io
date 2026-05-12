@@ -370,6 +370,13 @@ footer {
 .timeline-item {
   position: relative;
   margin-bottom: 1.25rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item--present,
+.timeline-item:hover {
+  opacity: 1;
 }
 
 .timeline-item:last-child {
@@ -409,15 +416,23 @@ footer {
 }
 
 .timeline-item--present .timeline-content {
-  background: rgba(var(--border-rgb), 0.05);
-  border-left: 4px solid var(--border-color);
+  border: 1px solid var(--border-color);
   padding: 1rem 1.5rem;
-  border-radius: 0 8px 8px 0;
-  transition: background 0.3s ease;
+  position: relative;
 }
 
-.timeline-item--present:hover .timeline-content {
-  background: rgba(var(--border-rgb), 0.1);
+.timeline-item--present .timeline-content::before {
+  content: "CURRENT";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: var(--bg-color);
+  padding: 0 5px;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  border: 1px solid var(--border-color);
 }
 
 @keyframes pulse {
