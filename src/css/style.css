@@ -172,7 +172,7 @@ body {
   font-family: 'Gill Sans', sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  margin-left: 1.5rem;
+  margin-left: 0;
   padding: 0.5rem;
   transition: color 0.3s;
 }
@@ -185,13 +185,14 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left: 1.5rem;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
   background-color: var(--nav-bg);
   min-width: 120px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
