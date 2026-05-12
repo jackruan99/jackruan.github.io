@@ -416,23 +416,7 @@ footer {
 }
 
 .timeline-item--present .timeline-content {
-  border: 1px solid var(--border-color);
-  padding: 1rem 1.5rem;
   position: relative;
-}
-
-.timeline-item--present .timeline-content::before {
-  content: "CURRENT";
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  background: var(--bg-color);
-  padding: 0 5px;
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
-  border: 1px solid var(--border-color);
 }
 
 @keyframes pulse {
