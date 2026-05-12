@@ -370,13 +370,6 @@ footer {
 .timeline-item {
   position: relative;
   margin-bottom: 1.25rem;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.timeline-item--present,
-.timeline-item:hover {
-  opacity: 1;
 }
 
 .timeline-item:last-child {
