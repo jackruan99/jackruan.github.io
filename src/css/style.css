@@ -454,6 +454,9 @@ footer {
 }
 
 .timeline-logo--icon {
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
