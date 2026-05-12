@@ -112,6 +112,12 @@ header img {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headshot:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Main styles */
@@ -153,12 +159,14 @@ main li {
   font-family: 'Gill Sans', sans-serif;
   font-size: 1rem;
   border-radius: 0; /* sharp corners */
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
 .white-border-button:hover {
   background-color: #fff;
   color: #000;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Footer styling */
