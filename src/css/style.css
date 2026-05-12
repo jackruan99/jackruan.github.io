@@ -181,6 +181,7 @@ header img {
   /* Anti-aliasing fix */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  margin-bottom: 1rem; /* Nudge higher */
 }
 
 .headshot:hover {
