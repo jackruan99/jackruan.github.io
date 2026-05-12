@@ -14,8 +14,8 @@
 }
 
 
-[data-theme="midcentury"] {
-  /* Midcentury Modern Mode */
+[data-theme="light"] {
+  /* Light Mode (Mid-Century Modern inspired) */
   --bg-color: #f4f1ea;
   --bg-gradient: radial-gradient(circle at center, #fdfbf7 0%, #f4f1ea 100%);
   --text-color: #3e2723;
