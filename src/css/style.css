@@ -1,9 +1,10 @@
 /* Apply to full body */
 body {
-  background-color: #000;  /* black background */
+  background: radial-gradient(circle at center, #111 0%, #000 100%) no-repeat fixed;
   color: #fff;             /* white text */
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 /* Layout container */
