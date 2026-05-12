@@ -15,8 +15,8 @@ body {
 /* Section styles */
 .section {
   text-align: left;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 /* Resume Entries styles */
@@ -64,8 +64,8 @@ body {
 /* Header styles */
 .title-img-wrapper {
   display: flex;
-  align-items: center; /* vertically center h1 and img */
-  gap: 1rem;           /* space between h1 and img */
+  align-items: flex-end; /* Align bottom of image with bottom of text */
+  gap: 2.5rem;           /* space between img and h1 */
 }
 
 header h1 {
@@ -83,8 +83,16 @@ header p {
 }
 
 header img {
-  max-height: 300px;    /* control image size */
+  max-height: 150px;    /* control image size */
   width: auto;
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
 }
 
 /* Main styles */
