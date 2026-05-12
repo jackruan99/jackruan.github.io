@@ -19,8 +19,11 @@
     // Immediate Theme Check
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    const savedUiMode = localStorage.getItem('ui-mode') || 'standard';
-    document.body.setAttribute('data-ui-mode', savedUiMode);
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedUiMode = localStorage.getItem('ui-mode') || 'standard';
+      document.body.setAttribute('data-ui-mode', savedUiMode);
+    });
   </script>
 </head>
 <body>
