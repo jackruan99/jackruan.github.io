@@ -33,25 +33,15 @@
           .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
             
-            // Setup Theme Toggle
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            
-            if (currentTheme === 'light') {
-              themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-            }
-
-            themeToggle.addEventListener('click', () => {
-              const theme = document.documentElement.getAttribute('data-theme');
-              const newTheme = theme === 'light' ? 'dark' : 'light';
-              document.documentElement.setAttribute('data-theme', newTheme);
-              localStorage.setItem('theme', newTheme);
-              if (newTheme === 'light') {
-                themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-              } else {
-                themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
-              }
+            // Setup Theme Dropdown Logic
+            const themeLinks = document.querySelectorAll('[data-set-theme]');
+            themeLinks.forEach(link => {
+              link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const newTheme = e.target.getAttribute('data-set-theme');
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+              });
             });
 
             // Setup UI Mode Dropdown
