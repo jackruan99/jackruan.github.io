@@ -42,7 +42,7 @@ body {
 .container {
   max-width: 1000px;
   margin: auto;
-  padding-top: 48px; /* Perfectly fits the slimmed navbar */
+  padding-top: 20px; /* Extremely tight space */
 }
 
 /* Section styles */
@@ -152,6 +152,7 @@ body {
 header h1 {
   font-size: 8rem;
   font-family: 'Pirata One', system-ui, serif;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
 }
