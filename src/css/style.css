@@ -201,7 +201,7 @@ body {
   position: relative;
   display: inline-block;
   margin-left: 1.5rem;
-  min-width: 120px; /* Forces enough space so the adjacent button doesn't overlap */
+  min-width: 180px; /* Forces enough space so the adjacent button doesn't overlap */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -211,7 +211,7 @@ body {
   top: 100%;
   left: 0;
   background-color: var(--nav-bg);
-  min-width: 120px;
+  min-width: 180px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
   z-index: 1;
   border: 1px solid var(--border-color);
