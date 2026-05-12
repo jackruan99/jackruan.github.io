@@ -28,34 +28,10 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="cyberpunk"] {
-  /* Cyberpunk Mode */
-  --bg-color: #0d0221;
-  --bg-gradient: radial-gradient(circle at center, #261447 0%, #0d0221 100%);
-  --text-color: #00ffcc;
-  --text-dim: #ff007f;
-  --nav-bg: rgba(13, 2, 33, 0.8);
-  --border-color: #00ffcc;
-  --btn-bg: #0d0221;
-  --btn-text: #00ffcc;
-  --btn-hover-bg: #00ffcc;
-  --btn-hover-text: #0d0221;
-  --shadow-color: rgba(0, 255, 204, 0.5);
-}
-
-[data-theme="ocean"] {
-  /* Ocean Mode */
-  --bg-color: #001f3f;
-  --bg-gradient: radial-gradient(circle at center, #003366 0%, #001f3f 100%);
-  --text-color: #e0f7fa;
-  --text-dim: #80deea;
-  --nav-bg: rgba(0, 31, 63, 0.8);
-  --border-color: #4dd0e1;
-  --btn-bg: #001f3f;
-  --btn-text: #4dd0e1;
-  --btn-hover-bg: #4dd0e1;
-  --btn-hover-text: #001f3f;
-  --shadow-color: rgba(77, 208, 225, 0.4);
+/* Evasive button mode */
+body[data-ui-mode="hard"] .white-border-button {
+  position: relative;
+  transition: top 0.2s ease, left 0.2s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 /* Apply to full body */
