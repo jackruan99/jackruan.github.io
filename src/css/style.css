@@ -350,3 +350,96 @@ footer {
   font-family: 'Pirata One', system-ui, serif;
   margin-bottom: 0;
 }
+
+/* ── Vertical Timeline ── */
+.timeline {
+  position: relative;
+  margin: 2rem 0 0 0;
+  padding-left: 2rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+  opacity: 0.4;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  border: 3px solid var(--bg-color);
+  box-shadow: 0 0 0 2px var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 3px var(--border-color), 0 0 12px var(--shadow-color);
+}
+
+/* Future / upcoming state */
+.timeline-item--future .timeline-dot {
+  background-color: var(--bg-color);
+  border-style: dashed;
+  opacity: 0.7;
+}
+
+.timeline-meta {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-family: 'Pirata One', serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--text-color);
+  margin: 0 0 0.2rem 0;
+}
+
+.timeline-sub {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  margin: 0 0 0.6rem 0;
+  font-style: italic;
+}
+
+.timeline-desc {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.timeline-item--future .timeline-content {
+  opacity: 0.65;
+}
