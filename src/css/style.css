@@ -170,13 +170,18 @@ header img {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--border-color);
+  /* Using box-shadow for the border to prevent sub-pixel artifacts during scaling */
+  box-shadow: 0 0 0 3px var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Anti-aliasing fix */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .headshot:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px var(--shadow-color);
+  /* Combined shadow: the 3px border + the 20px glow */
+  box-shadow: 0 0 0 3px var(--border-color), 0 0 20px var(--shadow-color);
 }
 
 /* Main styles */
