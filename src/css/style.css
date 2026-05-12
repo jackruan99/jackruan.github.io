@@ -31,7 +31,8 @@
 /* Evasive button mode */
 body[data-ui-mode="hard"] .white-border-button {
   position: relative;
-  transition: top 0.2s ease, left 0.2s ease, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  /* Remove the smooth transform transition so they teleport instantly! */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s !important;
 }
 
 /* Apply to full body */
