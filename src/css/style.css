@@ -186,6 +186,7 @@ body {
   position: relative;
   display: inline-block;
   margin-left: 1.5rem;
+  min-width: 120px; /* Forces enough space so the adjacent button doesn't overlap */
 }
 
 /* Dropdown Content (Hidden by Default) */
