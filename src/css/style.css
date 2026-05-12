@@ -11,6 +11,7 @@
   --btn-hover-bg: #fff;
   --btn-hover-text: #000;
   --shadow-color: rgba(255, 255, 255, 0.3);
+  --border-rgb: 255, 255, 255;
 }
 
 
@@ -27,6 +28,7 @@
   --btn-hover-bg: #00695c;
   --btn-hover-text: #f4f1ea;
   --shadow-color: rgba(62, 39, 35, 0.15);
+  --border-rgb: 0, 105, 92;
 }
 
 /* Hard Mode Theme Override - Red / Danger Theme */
@@ -42,6 +44,7 @@ body[data-ui-mode="hard"] {
   --btn-hover-bg: #ff4444;
   --btn-hover-text: #2a0000;
   --shadow-color: rgba(255, 68, 68, 0.4);
+  --border-rgb: 255, 68, 68;
 }
 
 /* Evasive button mode */
@@ -397,6 +400,35 @@ footer {
   background-color: var(--bg-color);
   border-style: dashed;
   opacity: 0.7;
+}
+
+/* Present / ongoing state */
+.timeline-item--present .timeline-dot {
+  background-color: var(--border-color);
+  animation: pulse 2s infinite;
+}
+
+.timeline-item--present .present-label {
+  font-weight: bold;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--border-rgb, 0, 0, 0), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--border-rgb, 0, 0, 0), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--border-rgb, 0, 0, 0), 0);
+  }
+}
+
+.timeline-item--present .timeline-title {
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .timeline-meta {
