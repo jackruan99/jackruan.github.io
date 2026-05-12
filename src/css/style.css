@@ -42,7 +42,7 @@ body {
 .container {
   max-width: 1000px;
   margin: auto;
-  padding-top: 60px; /* Reduced space for the fixed navbar */
+  padding-top: 48px; /* Perfectly fits the slimmed navbar */
 }
 
 /* Section styles */
@@ -57,7 +57,7 @@ body {
 
 /* Tighten gap for the first section */
 .section:first-of-type {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .section.active {
@@ -92,7 +92,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
   max-width: 1000px;
   box-sizing: border-box;
