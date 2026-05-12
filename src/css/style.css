@@ -85,8 +85,8 @@ body {
 /* Section styles */
 .section {
   text-align: left;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-out;
