@@ -62,6 +62,12 @@
                 const newUi = e.target.getAttribute('data-set-ui');
                 document.body.setAttribute('data-ui-mode', newUi);
                 localStorage.setItem('ui-mode', newUi);
+
+                // Reset button positions if returning to normal mode
+                if (newUi === 'standard') {
+                  const buttons = document.querySelectorAll('.white-border-button');
+                  buttons.forEach(btn => btn.style.transform = '');
+                }
               });
             });
 
