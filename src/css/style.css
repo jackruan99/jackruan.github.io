@@ -28,6 +28,21 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Hard Mode Theme Override - Red / Danger Theme */
+body[data-ui-mode="hard"] {
+  --bg-color: #2a0000;
+  --bg-gradient: radial-gradient(circle at center, #4a0000 0%, #1a0000 100%);
+  --text-color: #ffe6e6;
+  --text-dim: #ff9999;
+  --nav-bg: rgba(42, 0, 0, 0.8);
+  --border-color: #ff4444;
+  --btn-bg: #2a0000;
+  --btn-text: #ff4444;
+  --btn-hover-bg: #ff4444;
+  --btn-hover-text: #2a0000;
+  --shadow-color: rgba(255, 68, 68, 0.4);
+}
+
 /* Evasive button mode */
 body[data-ui-mode="hard"] .white-border-button {
   position: relative;
