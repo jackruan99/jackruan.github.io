@@ -221,6 +221,19 @@ body {
   display: block;
 }
 
+/* UI Mode Dropdown Logic: Hide Normal mode by default */
+.dropdown-content a[data-set-ui="standard"] {
+  display: none;
+}
+
+/* When in Hard/Naughty Mode, show Normal mode and hide Naughty mode */
+body[data-ui-mode="hard"] .dropdown-content a[data-set-ui="standard"] {
+  display: block;
+}
+body[data-ui-mode="hard"] .dropdown-content a[data-set-ui="hard"] {
+  display: none;
+}
+
 /* Header styles */
 .title-img-wrapper {
   display: flex;
