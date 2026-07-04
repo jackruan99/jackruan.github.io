@@ -12,6 +12,7 @@
   --btn-hover-text: #000;
   --shadow-color: rgba(255, 255, 255, 0.3);
   --border-rgb: 255, 255, 255;
+  --accent-color: #c8a24e;
 }
 
 
@@ -29,6 +30,7 @@
   --btn-hover-text: #f4f1ea;
   --shadow-color: rgba(62, 39, 35, 0.15);
   --border-rgb: 0, 105, 92;
+  --accent-color: #00695c;
 }
 
 /* Hard Mode Theme Override - Red / Danger Theme */
@@ -45,6 +47,7 @@ body[data-ui-mode="hard"] {
   --btn-hover-text: #2a0000;
   --shadow-color: rgba(255, 68, 68, 0.4);
   --border-rgb: 255, 68, 68;
+  --accent-color: #ff6666;
 }
 
 /* Evasive button mode */
@@ -473,7 +476,7 @@ footer {
   border-radius: 50%;
   object-fit: contain;
   border: 2px solid var(--border-color);
-  background-color: var(--bg-color);
+  background-color: #fff;
   padding: 4px;
   transition: transform 0.3s ease;
 }
@@ -490,4 +493,224 @@ footer {
 
 .timeline-item:hover .timeline-logo {
   transform: scale(1.1);
+}
+
+/* Feature flag for Naughty Mode Dropdown */
+[data-set-ui="hard"] {
+  display: none !important;
+}
+
+body.naughty-feature-enabled [data-set-ui="hard"] {
+  display: block !important;
+}
+
+/* ── Bold & Accent Text ── */
+header p strong,
+main p strong,
+main li strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(var(--border-rgb), 0.3);
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-dim);
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.tab-btn:hover {
+  color: var(--text-color);
+}
+
+.tab-btn.active {
+  color: var(--text-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.research-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--border-rgb), 0.25);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  margin-bottom: 1rem;
+}
+
+.research-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(var(--border-rgb), 0.1);
+}
+
+.research-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.research-card h3 {
+  font-family: 'Gill Sans', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.research-tag {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+}
+
+.research-card-icon {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.research-card:hover .research-card-icon {
+  color: var(--accent-color);
+  transform: translate(2px, -2px);
+}
+
+.research-meta {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.research-card p {
+  font-family: 'Gill Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.tab-empty {
+  font-family: 'Gill Sans', sans-serif;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+
+/* ── Responsive Design ── */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .title-img-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  main h1 {
+    font-size: 2.2rem;
+  }
+
+  .timeline {
+    margin-left: 5rem;
+  }
+
+  .timeline-logo {
+    left: -5.5rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .timeline-logo--icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .white-border-button {
+    width: auto;
+    min-width: 200px;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  .timeline {
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-logo {
+    display: none;
+  }
+
+  .white-border-button {
+    width: 100%;
+    min-width: unset;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .navbar-content {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-title {
+    font-size: 1.5rem;
+  }
+
+  .dropdown {
+    margin-left: 0.75rem;
+    min-width: auto;
+  }
 }

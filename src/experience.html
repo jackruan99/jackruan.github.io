@@ -5,78 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jack Ruan | Professional Experience</title>
 
-  <!-- Google Fonts: Pirata One -->
-  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet" />
+  <!-- Google Fonts: Pirata One + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=1.2" />
+  <link rel="stylesheet" href="css/style.css" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
   />
   <script>
+    // Immediate Theme Check (must run before paint to prevent flash)
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    document.addEventListener('DOMContentLoaded', () => {
-      const savedUiMode = localStorage.getItem('ui-mode') || 'standard';
-      document.body.setAttribute('data-ui-mode', savedUiMode);
-    });
   </script>
+  <script src="js/features.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
   <div class="container">
 
     <div id="navbar-placeholder"></div>
-      <script>
-        fetch('components/navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-            
-            const themeLinks = document.querySelectorAll('[data-set-theme]');
-            themeLinks.forEach(link => {
-              link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const newTheme = e.target.getAttribute('data-set-theme');
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-
-                document.body.setAttribute('data-ui-mode', 'standard');
-                localStorage.setItem('ui-mode', 'standard');
-                const buttons = document.querySelectorAll('.white-border-button');
-                buttons.forEach(btn => btn.style.transform = '');
-              });
-            });
-
-            const uiLinks = document.querySelectorAll('[data-set-ui]');
-            uiLinks.forEach(link => {
-              link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const newUi = e.target.getAttribute('data-set-ui');
-                document.body.setAttribute('data-ui-mode', newUi);
-                localStorage.setItem('ui-mode', newUi);
-
-                if (newUi === 'standard') {
-                  const buttons = document.querySelectorAll('.white-border-button');
-                  buttons.forEach(btn => btn.style.transform = '');
-                }
-              });
-            });
-
-            const buttons = document.querySelectorAll('.white-border-button');
-            buttons.forEach(btn => {
-              btn.addEventListener('mouseover', () => {
-                if (document.body.getAttribute('data-ui-mode') === 'hard') {
-                  const randomX = Math.floor(Math.random() * 300) - 150;
-                  const randomY = Math.floor(Math.random() * 300) - 150;
-                  btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-                }
-              });
-            });
-          });
-      </script>
       
       <div class="section">
         <main>
@@ -121,29 +71,6 @@
 
     
     <div id="footer-placeholder"></div>
-    <script>
-      fetch('components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-          initReveal();
-        });
-
-      function initReveal() {
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-            }
-          });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-          observer.observe(section);
-        });
-      }
-    </script>
   </div>
 
 </body>
