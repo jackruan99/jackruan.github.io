@@ -19,7 +19,6 @@
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
-  <script src="js/features.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -32,40 +31,31 @@
         <main>
           <h1>Professional Experiences</h1>
           <div class="resume-entries">
-            <h3>Capital One | Software Engineer | Certificate Management Team</h3>
-            <p><em>Feb 2025 - Present</em></p>
+            <h3>Capital One | Software Engineer</h3>
+            <p><em>Feb. 2024 - Present</em></p>
             <ul>
-              <li>Integrated OpenTelemetry across 20+ AWS Lambda functions, enabling end-to-end distributed tracing, cutting debugging time by 40%, and doubling the speed of production issue detection</li>
-              <li>Architected and deployed a serverless pipeline using AWS Lambda and SQS to automate the discovery of AWS accounts and their associated certificates across Capital One, streamlining certificate lifecycle management across thousands of accounts</li>
+              <li>Spearheaded the design and delivery of an extensible Claude Code AI agent after identifying support toil opportunities, engineering signal extraction and category classification over 3+ years of telemetry; established a modular sub-skills architecture that enabled cross-team contributions and automated triage to reduce MTTR.</li>
+              <li>Drove enterprise Post-Quantum Cryptography (PQC) readiness by architecting a TLS handshake discovery engine to map protocol distribution, authoring technical specs, and partnering with AWS engineering to deliver support for NIST PQC algorithms in AL2023 2023.10 across 90+ Golden Docker Images and 22 Lambda runtimes.</li>
+              <li>Automated Public Key Infrastructure (PKI) certificate lifecycle discovery across 1,000+ AWS accounts by architecting an event-driven serverless pipeline (Lambda, SQS, DynamoDB), eliminating 50% of manual operational toil and instrumenting 30+ services with OpenTelemetry distributed tracing.</li>
+              <li>Eliminated critical audit compliance gaps across 3 core platform teams by designing an end-to-end full-stack RBAC service (Angular route guards, Express middleware, Active Directory integration) with fail-closed error handling, cutting authorization turnaround from hours to minutes.</li>
+              <li>Accelerated migration of 100+ ETL pipelines by co-engineering a config-driven serverless data platform (AWS Glue, PySpark) with automated event ingestion, cutting dev effort by 80%, reducing data latency by 50%, and contributing to a patent filing.</li>
             </ul>
           </div>
-          <div class="resume-entries">
-            <h3>Capital One | Software Engineer | HR Warehouse Team</h3>
-            <p><em>Feb 2024 - Feb 2025</em></p>
-            <ul>
-              <li>Modernized a legacy ETL system by building a config-driven, serverless ETL platform using AWS Glue and PySpark, enabling the migration of 100+ ETL processes and reducing development effort by up to 79%; contributed to a patent submission</li>
-              <li>Developed an upstream notification infrastructure leveraging AWS SNS, SQS, and Lambda to automate ETL pipeline triggers on vendor data arrival, improving integration speed by 50% and significantly reducing manual intervention</li>
-              <li>Diagnosed and remediated 8 critical issues during an enterprise disaster recovery exercise; implemented corrective actions that enhanced system resilience and ensured uninterrupted data delivery in high-risk scenarios</li>
-            </ul>
-          </div>  
           <div class="resume-entries">
             <h3>Meta | Software Engineer Intern</h3>
             <p><em>May 2022 - Aug. 2022</em></p>
             <ul>
-              <li>Contributed to the Warehouse Data Privacy team in developing internal tools that support Meta's privacy commitments</li>
-              <li>Designed and implemented 3 critical safety features for comprehensive end-to-end monitoring and management for data users</li>
-              <li>Created 2 monitoring pipelines using Python and Presto to identify unintended methods users employ to bypass safety checks</li>
-              <li>Designed and developed the user interface for the safety features using React, PHP, and GraphQL</li>
+              <li>Prevented unauthorized data access and safety policy bypasses by engineering 2 distributed auditing pipelines in Python and Presto, executing automated compliance and anomaly detection across petabyte-scale internal data warehouses.</li>
+              <li>Architected full-stack privacy governance tooling (React, GraphQL, PHP/Hack) providing real-time user-access monitoring and automated policy remediation workflows for security and compliance teams.</li>
             </ul>
-          </div>  
-          <div class="resume-entries"></div>  
-          <h3>CIDAR Lab | Research Software Engineer Intern</h3>
-            <p><em>May 2022 - Aug. 2022</em></p>
+          </div>
+          <div class="resume-entries">
+            <h3>CIDAR Lab | Software Engineer Intern</h3>
+            <p><em>June 2021 - Sept. 2021</em></p>
             <ul>
-              <li>Developed 4 high-demand features for the open-source project 3DuF, an interactive web-based tool for designing custom microfluidic chips</li>
-              <li>Implemented, tested, and integrated Hightower’s and A* routing algorithms to efficiently find a connection between components</li>
-              <li>Developed key features, such as a keyboard shortcut for centering chip designs, significantly enhancing user experience</li>
-              <li>Refactored 20% of the codebase using the Vue.js framework, converting legacy JavaScript code to TypeScript for maintainability</li>
+              <li>Integrated A* and Hightower pathfinding algorithms into open-source CAD tool 3DuF for microfluidic component routing, while refactoring 20% of the codebase from legacy JavaScript to TypeScript and Vue.js.</li>
+            </ul>
+          </div>
         </main>
       </div>
 

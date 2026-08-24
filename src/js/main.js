@@ -1,81 +1,68 @@
 /**
  * main.js - Shared site initialization
- * Loads navbar and footer components, sets up theme/UI mode switching,
- * evasive button logic, and scroll reveal animations.
+ * Loads navbar and footer components, sets up theme switching,
+ * and scroll reveal animations.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Set UI mode from localStorage
-  const savedUiMode = localStorage.getItem('ui-mode') || 'standard';
-  document.body.setAttribute('data-ui-mode', savedUiMode);
+  // Helper to fetch component with fallback paths
+  const loadComponent = (placeholderId, relativePath, onLoaded) => {
+    const el = document.getElementById(placeholderId);
+    if (!el) return;
+
+    // Try absolute from root, then relative
+    const paths = [
+      '/' + relativePath,
+      relativePath,
+      '../' + relativePath
+    ];
+
+    const tryFetch = (index) => {
+      if (index >= paths.length) return;
+      fetch(paths[index])
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.text();
+        })
+        .then(data => {
+          el.innerHTML = data;
+          if (onLoaded) onLoaded();
+        })
+        .catch(() => tryFetch(index + 1));
+    };
+
+    tryFetch(0);
+  };
 
   // Load navbar
-  const navbarPlaceholder = document.getElementById('navbar-placeholder');
-  if (navbarPlaceholder) {
-    fetch('/src/components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        navbarPlaceholder.innerHTML = data;
-        initNavbarLogic();
-      });
-  }
+  loadComponent('navbar-placeholder', 'src/components/navbar.html', initNavbarLogic);
 
   // Load footer
-  const footerPlaceholder = document.getElementById('footer-placeholder');
-  if (footerPlaceholder) {
-    fetch('/src/components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        footerPlaceholder.innerHTML = data;
-        initReveal();
-      });
-  }
+  loadComponent('footer-placeholder', 'src/components/footer.html', initReveal);
 });
 
 function initNavbarLogic() {
-  // Theme dropdown
-  const themeLinks = document.querySelectorAll('[data-set-theme]');
-  themeLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const newTheme = e.target.getAttribute('data-set-theme');
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
 
-      // Disable naughty mode and reset button positions
-      document.body.setAttribute('data-ui-mode', 'standard');
-      localStorage.setItem('ui-mode', 'standard');
-      const buttons = document.querySelectorAll('.white-border-button');
-      buttons.forEach(btn => btn.style.transform = '');
-    });
-  });
+  const updateButton = (theme) => {
+    const isDark = (theme === 'dark');
+    toggleBtn.innerHTML = isDark
+      ? '<i class="bi bi-sun-fill"></i> Light Mode'
+      : '<i class="bi bi-moon-stars-fill"></i> Dark Mode';
+    toggleBtn.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+  };
 
-  // UI Mode dropdown
-  const uiLinks = document.querySelectorAll('[data-set-ui]');
-  uiLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const newUi = e.target.getAttribute('data-set-ui');
-      document.body.setAttribute('data-ui-mode', newUi);
-      localStorage.setItem('ui-mode', newUi);
+  const currentTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('theme') || 'light';
+  updateButton(currentTheme);
 
-      if (newUi === 'standard') {
-        const buttons = document.querySelectorAll('.white-border-button');
-        buttons.forEach(btn => btn.style.transform = '');
-      }
-    });
-  });
-
-  // Evasive button logic
-  const buttons = document.querySelectorAll('.white-border-button');
-  buttons.forEach(btn => {
-    btn.addEventListener('mouseover', () => {
-      if (document.body.getAttribute('data-ui-mode') === 'hard') {
-        const randomX = Math.floor(Math.random() * 300) - 150;
-        const randomY = Math.floor(Math.random() * 300) - 150;
-        btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-      }
-    });
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('theme', nextTheme);
+    updateButton(nextTheme);
   });
 }
 

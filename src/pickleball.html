@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack Ruan | Pickleball</title>
+
+  <!-- Google Fonts: Pirata One + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+  <script>
+    // Immediate Theme Check (must run before paint to prevent flash)
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div id="navbar-placeholder"></div>
+      
+      <div class="section">
+        <main>
+          <h1>Pickleball Highlights</h1>
+
+          <div id="pickleball-highlights" class="pickleball-entries">
+            <div class="highlight-card">
+              <div class="highlight-video-wrapper">
+                <video controls preload="metadata" poster="https://storage.googleapis.com/podify-picklebos-clips/clips/charlestown-court-5/2026/7/7/825ff95d-1ceb-4a00-b397-af8ed96fc8ae_w720.jpg">
+                  <source src="https://storage.googleapis.com/podify-picklebos-clips/clips/charlestown-court-5/2026/7/7/825ff95d-1ceb-4a00-b397-af8ed96fc8ae.mp4#t=21" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.querySelector('.highlight-video-wrapper video');
+      if (video) {
+        let initialized = false;
+        const setStartTime = () => {
+          if (!initialized) {
+            initialized = true;
+            video.currentTime = 21;
+          }
+        };
+
+        video.addEventListener('loadedmetadata', setStartTime, { once: true });
+        video.addEventListener('play', () => {
+          if (video.currentTime < 20.5) {
+            video.currentTime = 21;
+          }
+        }, { once: true });
+
+        if (video.readyState >= 1) {
+          setStartTime();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
